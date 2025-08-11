@@ -19,7 +19,7 @@ export const ProductList = ({ products, loading }: ProductListProps) => {
   if (products.length === 0) {
     return (
       <View style={styles.center}>
-        <Text>Nenhum produto encontrado.</Text>
+        <Text>Nenhum produto encontrado</Text>
       </View>
     );
   }

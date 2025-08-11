@@ -1,50 +1,132 @@
-# Welcome to your Expo app 👋
+# 📱 Catálogo Interativo Mobile com Listagem de Produtos por Categoria
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> Aplicativo mobile responsivo e leve desenvolvido em React Native com Expo para apresentar produtos de uma loja online organizados por categorias masculina e feminina. Consome uma API REST real via Axios, com navegação entre telas, exibição de detalhes e logout.
 
-## Get started
+---
 
-1. Install dependencies
+## 🧩 Desafio
 
-   ```bash
-   npm install
-   ```
+Criar a primeira versão de um app mobile que lista produtos por categoria, permite navegar entre telas e consome uma API externa. O projeto deve aplicar boas práticas de React Native, tratamento de estados de carregamento e erros, e organização clara do código.
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## ⚙️ Funcionalidades
 
-In the output, you'll find options to open the app in a
+- Tela de **Login** com validação simples e armazenamento temporário dos dados do usuário (useState ou Redux Toolkit)
+- Tela de **Lista de Produtos** com abas por categorias:
+  - Masculinas: camisetas, sapatos, relógios (mens-shirts, mens-shoes, mens-watches)
+  - Femininas: bolsas, vestidos, joias, sapatos, relógios (womens-bags, womens-dresses, womens-jewellery, womens-shoes, womens-watches)
+  - Consumo da API [DummyJSON](https://dummyjson.com/) via Axios
+- Tela de **Detalhes do Produto** mostrando nome, imagem, descrição, preço e desconto
+- Botão de **Logout** que limpa os dados e retorna à tela de login
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## 📂 Estrutura de Pastas
 
 ```bash
-npm run reset-project
+
+catalogo-interativo-unifecaf
+├── app/                   # Estrutura de navegação (Expo Router)
+│   ├── (stacks)           # Telas em pilha (detalhes do produto)
+│   ├── (tabs)             # Telas com navegação por abas
+│   ├── configuration      # Configuração geral
+│   ├── login              # Tela de login
+│
+├── src/
+│   ├── assets/            # Imagens e arquivos estáticos
+│   ├── components/        # Componentes reutilizáveis
+│   ├── screens/           # Telas principais (home, detalhes, abas)
+│   ├── services/          # Configuração e chamadas de API (Axios)
+│   ├── store/             # Redux Toolkit (slices e store)
+│   ├── utils/             # Funções utilitárias
+│
+├── app.json               # Configuração do Expo
+├── package.json           # Dependências do projeto
+└── README.md              # Documentação
 ```
+- O app roda com:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+  ```bash
+  npx expo start
 
-## Learn more
+- Layout e navegação conforme [Figma](https://www.figma.com/design/Nbrwqt89RN9cvPYHDF08pu/Portfolio-Mobile-development)
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🛠️ Tecnologias Utilizadas
+- React Native + Expo
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- Axios
 
-## Join the community
+- Redux Toolkit
 
-Join our community of developers creating universal apps.
+- React Navigation (ou Expo Router)
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- API pública: DummyJSON
+
+- TypeScript
+
+## 🚀 Como executar o projeto
+1. Clone o repositório:
+
+``` git clone https://github.com/Ingridxisto/Catalogo-Interativo-Mobile-API-DummyJSON.git ```
+
+``` cd Catalogo-Interativo-Mobile-API-DummyJSON ```
+
+2. Instale as dependências:
+
+``` npm install ```
+
+3. Inicie o Expo:
+
+``` npx expo start ```
+
+4. Abra o app em um emulador ou dispositivo via QR Code.
+
+## 🖼️ Prints do Aplicativo
+
+### Tela de Login
+
+![Tela de Login](projeto/images/Login.png)
+*Validação simples dos campos e armazenamento temporário do usuário.*
+
+![Campos Obrigatórios](projeto/images/Campo-obrigatorios.png)
+*Mensagem de campos obrigatórios.*
+
+![Dados incorretos](projeto/images/username-senha-incorretos.png)
+*Aviso para usuário ou senha incorretos.*
+
+### Tela de Lista de Produtos com Abas por Categorias
+
+#### Produtos Masculinos
+![Produtos Masculinos](projeto/images/produtos-masc.png)
+
+#### Produtos Femininos
+![Produtos Femininos](projeto/images/produtos-fem.png)
+
+### Tela de Detalhes de Produto
+
+#### Produto Masculino
+![Detalhes Produto Masculino](projeto/images/detalhes-prod-masc.png)
+
+#### Produto Feminino
+![Detalhes Produto Feminino](projeto/images/detalhes-prod-fem.png)
+
+### Tela de Configurações/Logout
+
+#### Configurações
+![Configurações](projeto/images/configuracoes.png)
+
+#### Tela de Logout
+![Tela de Logout](projeto/images/logout.png)
+
+#### Logout com retorno para o login com os dados limpos 
+![Logout com dados limpos](projeto/images/logout-sem-dados-no-login.png)
+
+## Conclusão
+
+Este projeto representa um exemplo prático e completo de desenvolvimento de um aplicativo móvel moderno utilizando React Native com Expo, integrando navegação fluida, gerenciamento eficiente de estado com Redux Toolkit e consumo dinâmico de dados via API externa.
+
+Além de consolidar conceitos fundamentais de desenvolvimento mobile, o app oferece uma experiência intuitiva e responsiva para o usuário final, servindo como base robusta para projetos futuros e aprimoramentos.
+
+Convido você a explorar o código, entender a arquitetura e contribuir para tornar este projeto ainda melhor!
+

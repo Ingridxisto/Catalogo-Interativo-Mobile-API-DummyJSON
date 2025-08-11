@@ -10,7 +10,7 @@ import {
   Text,
   View,
 } from "react-native";
-import { styles } from "./styles";
+import { styles } from "../../src/styles/styles";
 
 // username: João da Silva
 // password: joaodasilva

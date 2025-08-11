@@ -11,6 +11,11 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  labelContainer: {
+    height: 90,
+    justifyContent: "center",
+    alignItems: "center",
+  },
   label: {
     fontWeight: "bold",
     fontSize: 16,

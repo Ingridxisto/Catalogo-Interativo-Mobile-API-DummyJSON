@@ -1,4 +1,3 @@
-import { useThemeColor } from "@/hooks/useThemeColor";
 import { calculatePercent } from "@/src/utils/calculate-percent";
 import { money } from "@/src/utils/money";
 import { theme } from "@/src/utils/theme";
@@ -6,7 +5,6 @@ import { Text, View, Image, TouchableOpacity } from "react-native";
 import { styles } from "./styles"
 import { router } from "expo-router";
 import { useDispatch } from "react-redux";
-import { useEffect } from "react";
 import { setDetailsProduct } from "@/src/store/slices/details-product-slice";
 
 export const CardItemList = ({ item, style }: {item: any; style?: any}) => {
