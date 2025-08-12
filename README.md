@@ -122,6 +122,9 @@ catalogo-interativo-unifecaf
 #### Logout com retorno para o login com os dados limpos 
 ![Logout com dados limpos](projeto/images/logout-sem-dados-no-login.png)
 
+#### PDF com prints das telas e breve explicação das funcionalidades
+![Prints das telas](./Prints-das-Telas.pdf)
+
 ## Conclusão
 
 Este projeto representa um exemplo prático e completo de desenvolvimento de um aplicativo móvel moderno utilizando React Native com Expo, integrando navegação fluida, gerenciamento eficiente de estado com Redux Toolkit e consumo dinâmico de dados via API externa.
