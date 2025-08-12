@@ -1,7 +1,7 @@
 import { calculatePercent } from "@/src/utils/calculate-percent";
 import { money } from "@/src/utils/money";
 import { styles } from "@/src/components/row-list/styles";
-import { Text, View, Image, ScrollView, StyleSheet } from "react-native";
+import { Text, View, Image, ScrollView } from "react-native";
 
 interface DetailsProductProps {
   item: any;
